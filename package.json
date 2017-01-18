@@ -1,0 +1,20 @@
+{
+  "name": "discordbot",
+  "version": "1.0.0",
+  "description": "discord bot test",
+  "main": "main.js",
+  "scripts": {
+    "start": "node --harmony ."
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "test"
+  ],
+  "author": "KelviNosse",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "discord.js": "^11.0.0",
+    "discord.js-commando": "^0.8.3"
+  }
+}
