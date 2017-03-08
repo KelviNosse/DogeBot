@@ -1,4 +1,5 @@
 const { Command } = require('discord.js-commando')
+const emoji_finder = require('../../utils/emo')
 module.exports = class Help extends Command {
     constructor(client) {
         super(client, {
@@ -11,7 +12,7 @@ module.exports = class Help extends Command {
 
     list_commands(){
       const commands = this.client.registry.commands
-      const emoji    = this.client.emojis.find((e) => {return e.name === 'cooldoge' })
+      const emoji    = emoji_finder(this.client.emojis, 'cooldoge')
       let msg = '**Wow, cosas que puedo hacer**\n'
       msg += commands.map((c) => {
         return `${emoji} **${c.name}:** ${c.description}`
@@ -19,7 +20,6 @@ module.exports = class Help extends Command {
       return msg
     }
     async run(message, args) {
-        console.log(`Let's see`)
         message.say(this.list_commands())
     }
 }
