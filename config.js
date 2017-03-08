@@ -4,6 +4,7 @@ module.exports = {
         ['tools', 'Tools']
     ],
     client: {
+        owner: '271067304815493125',
         commandPrefix: '?',
         unknownCommandResponse: false
     },
