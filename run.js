@@ -1,6 +1,6 @@
 const { Client } = require('discord.js-commando')
-const bot = new Client()
 const config = require('./config')
-bot.registry.registerGroup('tasks', 'Tasks')
+const bot = new Client(config.client)
+bot.registry.registerGroups(config.registerGroups)
 bot.registry.registerCommandsIn(__dirname + '/src/commands')
 bot.login(config.token);
