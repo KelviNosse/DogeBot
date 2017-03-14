@@ -1,12 +1,20 @@
-module.exports = {
+const client = require('./src/db/setup')
+async function config(){
+  let data = await client.get_file('doge.msp')
+  let cfg = JSON.parse(data)
+  return {
     registerGroups: [
         ['tasks', 'Tasks'],
         ['tools', 'Tools']
     ],
     client: {
-        owner: '271067304815493125',
-        commandPrefix: '?',
-        unknownCommandResponse: false
+      owner: cfg.owner,
+      commandPrefix: '?',
+      unknownCommandResponse: false
     },
-    token: 'MjcxMDY3MzA0ODE1NDkzMTI1.C2BCqQ.V1mv5i-WTop_uJWI0E0yo_QFkxY'
+    token: cfg.token
+  }
+}
+module.exports = async ()=>{
+  return await config()
 }
