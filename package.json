@@ -1,7 +1,7 @@
 {
-  "name": "discordbot",
+  "name": "DogeBot",
   "version": "1.0.0",
-  "description": "discord bot test",
+  "description": "A discord doge bot, that does dog things",
   "main": "run.js",
   "scripts": {
     "start": "nodemon --harmony ."
