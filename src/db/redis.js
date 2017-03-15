@@ -5,7 +5,6 @@ module.exports = class Redis {
         this.redis = redis.createClient({
             db: 2
         })
-        this.config_file = {}
     }
     get db() {
         return this.redis

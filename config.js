@@ -9,7 +9,7 @@ async function config(){
     ],
     client: {
       owner: cfg.owner,
-      commandPrefix: '?',
+      commandPrefix: '>',
       unknownCommandResponse: false
     },
     token: cfg.token
