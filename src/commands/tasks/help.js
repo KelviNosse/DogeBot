@@ -6,7 +6,8 @@ module.exports = class Help extends Command {
             name: 'ayuda',
             group: 'tasks',
             memberName: 'ayuda',
-            description: 'Muestra todos los comandos disponibles'
+            description: 'Muestra todos los comandos disponibles',
+            examples: ['ayuda']
         });
     }
 
@@ -18,6 +19,7 @@ module.exports = class Help extends Command {
             if (!c.guildOnly)
                 return `${emoji} **${c.name}:** ${c.description}`
         }).join('\n')
+        msg += `\nEjecuta **acerca <comando>** para saber el uso de un comando en específico.`
         return msg
     }
     async run(message, args) {

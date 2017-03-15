@@ -6,7 +6,8 @@ module.exports = class DiceRoll extends commando.Command {
             name: 'roll',
             group: 'tasks',
             memberName: 'roll',
-            description: 'Tira un dado!'
+            description: 'Tira un dado!',
+            examples: ['roll']
         });
     }
 
