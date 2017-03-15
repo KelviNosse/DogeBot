@@ -9,7 +9,7 @@ module.exports = class Asciify extends Command {
             name: 'asciify',
             group: 'fun',
             memberName: 'asciify',
-            description: 'Convierte texto a formato ASCII',
+            description: 'Convierte texto en arte ASCII',
             examples: ['asciify <texto>']
         })
         this.site = `http://artii.herokuapp.com/`
