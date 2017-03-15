@@ -4,7 +4,7 @@ module.exports = class DiceRoll extends commando.Command {
     constructor(client) {
         super(client, {
             name: 'roll',
-            group: 'tasks',
+            group: 'fun',
             memberName: 'roll',
             description: 'Tira un dado!',
             examples: ['roll']

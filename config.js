@@ -5,7 +5,8 @@ async function config(){
   return {
     registerGroups: [
         ['tasks', 'Tasks'],
-        ['tools', 'Tools']
+        ['tools', 'Tools'],
+        ['fun', 'Fun']
     ],
     client: {
       owner: cfg.owner,
