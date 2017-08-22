@@ -30,10 +30,10 @@ module.exports = class Asciify extends Command {
         }
     }
     async run(message, args) {
-        if (!args) return message.say(`Ups! Uso invalido! Ejemplo: asciify "Pony Rosado"`)
+        if (!args) return message.say(`Ups! Uso invalido! Ejemplo: **asciify** _Pony Rosado_`)
             .then(msg => msg.delete(3000))
         let ascii = await this.asciify_it(args)
-        if(ascii.status !== 200) return message.say(`Lo siento no se permiten emojis ${emoji_finder(this.client.emojis, 'dogesad')}`)
+        if(ascii.status !== 200) return message.say(`Ups! Algo salio mal ${emoji_finder(this.client.emojis, 'dogesad')}`)
         else return message.say('\`\`\`' + ascii.msg + '\`\`\`')
     }
 }
