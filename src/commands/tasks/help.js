@@ -23,6 +23,7 @@ module.exports = class Help extends Command {
         return msg
     }
     async run(message, args) {
-        message.say(this.list_commands())
+        message.author.sendMessage(this.list_commands());
+        message.say(`${message.author} te he enviado un mensaje con la información.`)
     }
 }

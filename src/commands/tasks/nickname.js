@@ -6,7 +6,7 @@ module.exports = class SetNickname extends Command{
       name: 'nickname',
       group: 'tasks',
       memberName: 'nickname',
-      description: 'Cambia tu sobrenombre actual de este servidor',
+      description: 'Cambia tu sobrenombre actual del servidor',
       examples: ['nickname <nombre>']
     })
   }
