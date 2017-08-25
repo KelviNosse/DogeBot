@@ -11,7 +11,8 @@ async function config(){
     client: {
       owner: cfg.owner,
       commandPrefix: '>',
-      unknownCommandResponse: false
+      unknownCommandResponse: false,
+      disableEveryone: true
     },
     token: cfg.token
   }
